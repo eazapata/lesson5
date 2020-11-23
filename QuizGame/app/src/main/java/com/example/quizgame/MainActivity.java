@@ -37,7 +37,11 @@ public class MainActivity extends AppCompatActivity {
         mQuestionTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+                if(mCurrentIndex < mQuestionBank.length -1){
+                    mCurrentIndex = (mCurrentIndex + 1);
+                }else{
+                    mCurrentIndex = 0;
+                }
                 updateQuestion();
             }
         });
@@ -60,7 +64,11 @@ public class MainActivity extends AppCompatActivity {
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+                if(mCurrentIndex < mQuestionBank.length -1){
+                    mCurrentIndex = (mCurrentIndex + 1);
+                }else{
+                    mCurrentIndex = 0;
+                }
                 updateQuestion();
             }
         });
