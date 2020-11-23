@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 if (mCurrentIndex == 0) {
                     mCurrentIndex = mQuestionBank.length -1;
                 }else{
-                    mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
+                    mCurrentIndex = (mCurrentIndex - 1);
                 }
                 updateQuestion();
             }
